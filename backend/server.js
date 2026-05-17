@@ -17,6 +17,9 @@ app.use("/api/auth", authRoutes);
 //history
 const historyRoutes = require("./routes/history");
 app.use("/api/history", historyRoutes);
+// users
+const userRoutes = require("./routes/user");
+app.use("/api/users", userRoutes);
 
 app.get("/", (req, res) => {
     res.send("Backend running OK 🚀");
