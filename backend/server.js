@@ -3,13 +3,17 @@ const app = express();
 
 app.use(express.json());
 
-// routes thuốc
+// thuốc
 const drugRoutes = require("./routes/drug");
 app.use("/api/drugs", drugRoutes);
 
-// routes bệnh nền
+// bệnh nền
 const diseaseRoutes = require("./routes/disease");
 app.use("/api/diseases", diseaseRoutes);
+
+// login
+const authRoutes = require("./routes/auth");
+app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
     res.send("Backend running OK 🚀");
