@@ -21,6 +21,9 @@ app.use("/api/history", historyRoutes);
 const userRoutes = require("./routes/user");
 app.use("/api/users", userRoutes);
 
+const contraindicationRoutes = require("./routes/contraindication");
+app.use("/api/contraindications", contraindicationRoutes);
+
 app.get("/", (req, res) => {
     res.send("Backend running OK 🚀");
 });
