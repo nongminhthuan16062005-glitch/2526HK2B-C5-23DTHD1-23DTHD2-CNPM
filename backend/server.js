@@ -17,6 +17,12 @@ app.use("/api/auth", authRoutes);
 //history
 const historyRoutes = require("./routes/history");
 app.use("/api/history", historyRoutes);
+// users
+const userRoutes = require("./routes/user");
+app.use("/api/users", userRoutes);
+
+const contraindicationRoutes = require("./routes/contraindication");
+app.use("/api/contraindications", contraindicationRoutes);
 
 app.get("/", (req, res) => {
     res.send("Backend running OK 🚀");
