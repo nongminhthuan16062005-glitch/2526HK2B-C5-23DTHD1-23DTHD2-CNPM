@@ -14,6 +14,9 @@ app.use("/api/diseases", diseaseRoutes);
 // login
 const authRoutes = require("./routes/auth");
 app.use("/api/auth", authRoutes);
+//history
+const historyRoutes = require("./routes/history");
+app.use("/api/history", historyRoutes);
 
 app.get("/", (req, res) => {
     res.send("Backend running OK 🚀");
